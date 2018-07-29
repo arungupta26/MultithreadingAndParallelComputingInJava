@@ -1,5 +1,7 @@
 # MultithreadingAndParallelComputingInJava
 
+Please ref pptx for theory
+
 Sequence in which you to follow the codes(Follow package names)
 1) Basics
   1) withoutThreading
