@@ -33,7 +33,7 @@ class FirstWorker implements Runnable {
                 System.out.println("Putting in queue " + counter);
                 counter++;
                 Thread.sleep(10);
-                if (counter>100)
+                if (counter > 100)
                     break;
             }
         } catch (InterruptedException e) {
@@ -54,8 +54,10 @@ class SecondWorker implements Runnable {
     public void run() {
         try {
             while (true) {
-                System.out.println("taking from queue "+blockingQueue.take());
+                System.out.println("taking from queue " + blockingQueue.take());
                 Thread.sleep(1000);
+                if (blockingQueue.size() == 0)
+                    break;
 
             }
 
